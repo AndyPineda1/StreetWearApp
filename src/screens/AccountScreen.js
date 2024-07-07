@@ -35,7 +35,7 @@ const AccountScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#d5cdb6', // color similar al de la imagen
+    backgroundColor: '#d5cdb6',
     padding: 16,
   },
   title: {
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   card: {
-    backgroundColor: '#333', // color oscuro para los bloques
+    backgroundColor: '#333',
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
