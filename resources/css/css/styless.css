@@ -1,0 +1,17 @@
+body{
+background-image: url('../../../imagenes/login_final.png');
+background-size: cover;
+width: 100%;
+background-repeat: no-repeat;
+}
+
+.btn-block{
+    display: block;
+    width: 500px;
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 10px;
+
+    }
+
+

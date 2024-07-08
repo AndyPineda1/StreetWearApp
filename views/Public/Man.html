@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../../resources/css/css/nav_style.css">
+    <link rel="stylesheet" href="../../resources/css/css/man.css">
+    <link rel="stylesheet" href="../../resources/css/css/footer.css">
+    <link rel="stylesheet" href="../../resources/css/css/filter_search.css">
+    <!-- Bootstrap CSS -->
+    <link href="../../resources/css/boostrap/boostrap-min.css" rel="stylesheet">
+    <!-- Icono de la página -->
+    <link type="image/png" rel="icon" href="../../imagenes/Logo_streetwear.jpg">
+    <title>Men's</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <main>
+        <h4 id="mainTitle"></h4>
+        <br><br><br>
+        <div class="container flex-grow-1">
+            <!-- Barra de busqueda -->
+            <input type="text" id="search" class="form-control" placeholder="Search product" oninput="searchRow()">
+            <br><br>
+        </div>
+        
+        <div class="row m-4" id="idProducto">
+            <!-- Aquí se cargarán los productos -->
+            <div id="productos" class="row justify-content-center align-items-center">
+
+            </div>
+
+        </div>
+    </main>
+
+    <script type="text/javascript" src="../../resources/css/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/css/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../../controllers/utils/components.js"></script>
+    <script type="text/javascript" src="../../controllers/utils/public.js"></script>
+    <script type="text/javascript" src="../../controllers/public/man.js"></script>
+
+</body>
+
+</html>
