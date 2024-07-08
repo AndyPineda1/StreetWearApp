@@ -35,7 +35,7 @@ const AccountScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#d5cdb6',
+    backgroundColor: '#3c4240',
     padding: 16,
   },
   title: {
