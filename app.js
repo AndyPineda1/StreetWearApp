@@ -6,21 +6,24 @@ import ProfileScreen from './screens/ProfileScreen';
 import PasswordScreen from './screens/PasswordScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import AboutUsScreen from './screens/AboutUsScreen';
+import PasswordScreen from './screens/PasswordScreen';
+import ForgotPasswordScreen from './ForgotPasswordScreen';
 
 const Stack = createStackNavigator();
 
 function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Account">
-        <Stack.Screen name="Account" component={AccountScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
-        <Stack.Screen name="Password" component={PasswordScreen} />
-        <Stack.Screen name="OrderHistory" component={OrderHistoryScreen} />
-        <Stack.Screen name="AboutUs" component={AboutUsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+    return (
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Account">
+          <Stack.Screen name="Account" component={AccountScreen} />
+          <Stack.Screen name="Profile" component={ProfileScreen} />
+          <Stack.Screen name="Password" component={PasswordScreen} />
+          <Stack.Screen name="OrderHistory" component={OrderHistoryScreen} />
+          <Stack.Screen name="AboutUs" component={AboutUsScreen} />
+          <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
 
 export default App;
