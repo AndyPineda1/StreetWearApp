@@ -112,17 +112,16 @@ class ClienteHandler
                 apellido_Cliente, 
                 correo_Cliente, 
                 direccion_Cliente, 
-                img_Cliente,
                 estado_Cliente, 
                 numero_Cliente, 
                 clave_Cliente
-            ) VALUES (?, ?, ?, ?, ?, 1, ?, ?)';
+            ) VALUES (?, ?, ?, ?, 1, ?, ?);';
         $params = array(
             $this->nombre,
             $this->apellido,
             $this->correo,
             $this->direccion,
-            $this->imagen,
+            //$this->imagen,
             $this->numero,
             $this->clave
         );
