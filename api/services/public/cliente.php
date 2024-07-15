@@ -67,7 +67,8 @@ if (isset($_GET['action'])) {
                     !$cliente->setCorreo($_POST['correoCliente']) or
                     !$cliente->setDireccion($_POST['direccionCliente']) or
                     !$cliente->setNumero($_POST['telefonoCliente']) or
-                    !$cliente->setClave($_POST['claveCliente']) 
+                    !$cliente->setClave($_POST['claveCliente']) or
+                    !$cliente->setImagen($_FILES['imagenCliente'])
                 ) {
                     $result['error'] = $cliente->getDataError();
                 } elseif ($_POST['claveCliente'] != $_POST['confirmarClave']) {
