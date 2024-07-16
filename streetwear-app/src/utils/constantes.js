@@ -1,0 +1,1 @@
+export const IP = 'http://10.10.3.127/StreetWearApp/api/'
