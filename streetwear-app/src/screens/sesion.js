@@ -17,6 +17,8 @@ export default function Sesion({ navigation }) {
   const [usuario, setUsuario] = useState("");
   const [contrasenia, setContrasenia] = useState("");
 
+
+  //Detecta si tenemos unas sesion activa
   const validarSesion = async () => {
     try {
       const DATA = await fetchData("cliente", "getUser");
@@ -38,6 +40,8 @@ export default function Sesion({ navigation }) {
     }
   };
 
+
+  //cerrar sesion 
   const cerrarSesion = async () => {
     try {
       const DATA = await fetchData("cliente", "logOut");
@@ -53,9 +57,10 @@ export default function Sesion({ navigation }) {
     }
   };
 
+
   const handlerLogin = async () => {
     try {
-      // Crea un formulario FormData con los datos de usuario y contraseña
+      // Crea un formulario FormData con los datos de usuario y clave
       const form = new FormData();
       form.append("correo", usuario);
       form.append("clave", contrasenia);
