@@ -1,1 +1,1 @@
-export const IP = 'http://10.10.3.127/StreetWearApp/api/'
+export const IP = 'http://192.168.147.23/StreetWearApp/api/'

@@ -14,13 +14,14 @@ import {
   Alert
 } from "react-native";
 import Input from "../components/Inputs/Input";
+import MaskedInputTelefono from "../components/Inputs/MaskedInputTelefono";
 import Buttons from "../components/Buttons/Button";
-import fetchData from "../utils/fetchdata";
+import fetchData from "../utils/conexion";
 
-export default function Sesion({ navigation }) {
+export default function Registro({ navigation }) {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
-  const [usuario, setUsuario] = useState("");
+  const [telefono, setTelefono] = useState("");
   const [contrasenia, setContrasenia] = useState("");
   const [confirmarContrasenia, setConfirmarContrasenia] = useState("");
   const [correo, setCorreo] = useState("");
@@ -31,13 +32,12 @@ export default function Sesion({ navigation }) {
     try {
       // Crear un FormData con los datos del usuario
       const form = new FormData();
-      form.append("nombre_cliente", nombre);
-      form.append("apellido_cliente", apellido);
-      form.append("usuario_cliente", usuario);
-      form.append("clave_cliente", contrasenia);
-      form.append("correo_cliente", correo);
-      form.append("estado_cliente", 1); // Estado por defecto para nuevos registros
-      form.append("confirmar_clave", confirmarContrasenia);
+      form.append("nombreCliente", nombre);
+      form.append("apellidoCliente", apellido);
+      form.append("claveCliente", contrasenia);
+      form.append("telefonoCliente", telefono);
+      form.append("correoCliente", correo);
+      form.append("confirmarClave", confirmarContrasenia);
 
       // Llamar a la función fetchData para enviar los datos al servidor
       const DATA = await fetchData("cliente", "signUpMovil", form);
@@ -62,8 +62,8 @@ export default function Sesion({ navigation }) {
     try {
       // Crear un FormData con los datos de inicio de sesión
       const form = new FormData();
-      form.append("usuario_cliente", usuario);
-      form.append("clave_cliente", contrasenia);
+      form.append("correo", correo);
+      form.append("clave", contrasenia);
 
       // Realizar una solicitud para iniciar sesión usando fetchData
       const DATA = await fetchData("cliente", "logIn", form);
@@ -73,7 +73,7 @@ export default function Sesion({ navigation }) {
         Alert.alert("Bienvenido!", "Cuenta registrada satisfactoriamente");
         clearFields();
         // Navegar a la pantalla principal de la aplicación
-        navigation.replace("Navigator");
+        navigation.replace("navigator");
       } else {
         // Mostrar una alerta en caso de error durante el inicio de sesión
         console.log(DATA);
@@ -110,13 +110,13 @@ export default function Sesion({ navigation }) {
 
   // Función para navegar a la pantalla de inicio de sesión
   const navigateSesion = async () => {
-    navigation.replace("Sesion");
+    navigation.replace("sesion");
   };
 
   // Función para limpiar los campos del formulario
   const clearFields = () => {
     setContrasenia("");
-    setUsuario("");
+    setTelefono("");
     setApellido("");
     setNombre("");
     setCorreo("");
@@ -128,19 +128,9 @@ export default function Sesion({ navigation }) {
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
-      <StatusBar barStyle="light-content" backgroundColor="#000000" />
+      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <ImageBackground
-          source={require("../../src/img/wallpaper1.png")}
-          style={styles.decorator}
-        >
-          <Image
-            source={require("../../assets/logo.png")}
-            style={styles.image}
-            resizeMode="contain"
-          />
-        </ImageBackground>
-        <View style={[styles.mainContainer, keyboardVisible && { marginTop: -30 }]}>
+        <View style={[styles.mainContainer, keyboardVisible]}>
           <Text style={styles.LargeText}>¡Regístrate!</Text>
           <Input
             placeHolder="Nombre"
@@ -152,10 +142,9 @@ export default function Sesion({ navigation }) {
             setValor={apellido}
             setTextChange={setApellido}
           />
-          <Input
-            placeHolder="Usuario"
-            setValor={usuario}
-            setTextChange={setUsuario}
+          <MaskedInputTelefono
+            telefono={telefono}
+            setTelefono={setTelefono}
           />
           <Input
             placeHolder="Correo"
@@ -193,20 +182,12 @@ const styles = StyleSheet.create({
     width: "100%",
     position: "relative",
   },
-  image: {
-    width: 200,
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: [{ translateX: -100 }, { translateY: -130 }],
-  },
   container: {
     flex: 1,
     backgroundColor: "#f5f5f5",
   },
   LargeText: {
     fontSize: 35,
-    fontFamily: "FuturaMedium",
     marginTop: 13,
     marginBottom: 25,
   },
@@ -214,7 +195,6 @@ const styles = StyleSheet.create({
     marginTop: 25,
   },
   buttonText: {
-    fontFamily: "FuturaMedium",
     marginBottom: 20,
     fontSize: 20,
   },
@@ -234,7 +214,6 @@ const styles = StyleSheet.create({
     width: "100%",
     alignItems: "center",
     backgroundColor: "#F8F8F8",
-    marginTop: -150,
     borderTopLeftRadius: 60,
   },
   devider: {

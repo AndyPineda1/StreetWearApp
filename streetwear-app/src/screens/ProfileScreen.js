@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 const getClientData = () => {
   return {
     id_Cliente: 1,
-    nombre_Cliente: 'Juan',
+    nombre_Cliente: 'wilfredo',
     apellido_Cliente: 'Pérez',
     numero_Cliente: '123456789',
     correo_Cliente: 'juan.perez@example.com',

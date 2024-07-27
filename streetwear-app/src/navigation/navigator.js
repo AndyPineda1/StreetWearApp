@@ -5,7 +5,9 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 // Importa tus componentes de pantalla aquí
 import inicio from '../screens/inicio';
 import carrito from '../screens/carrito';
-import ajustes from '../screens/ajustes';
+import ajustes from '../screens/AboutUsScreen';
+import productos from '../screens/Productos';
+import profilescreen from '../screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -45,6 +47,16 @@ const TabNavigator = () => {
       <Tab.Screen
         name="ajustes"
         component={ajustes}
+        options={{ title: '' }}
+      />
+      <Tab.Screen
+        name="productos"
+        component={productos}
+        options={{ title: '' }}
+      />
+      <Tab.Screen
+        name="profilescreen"
+        component={profilescreen}
         options={{ title: '' }}
       />
     </Tab.Navigator>

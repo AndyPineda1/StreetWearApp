@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, Alert, FlatList, RefreshControl } from "react-native";
 import ProductoCard from '../components/cards/producto';
 import * as constantes from '../utils/constantes';
-import fetchData from "../utils/fetchdata";
+import fetchData from "../utils/conexion";
 
 // Definimos el componente funcional Home que recibe la navegación como parámetro.
 export default function Home({ navigation }) {
@@ -82,7 +82,6 @@ const styles = StyleSheet.create({
   },
   MainText: {
     fontSize: 30,
-    fontFamily: 'FuturaMedium',
     marginTop: 30,
     marginBottom: 40,
     textAlign: "center"

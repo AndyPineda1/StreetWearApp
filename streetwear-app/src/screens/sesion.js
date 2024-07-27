@@ -53,6 +53,10 @@ export default function Sesion({ navigation }) {
     }
   };
 
+  const navigateRegister = async () => {
+    navigation.navigate("registro")
+  };
+
   const handlerLogin = async () => {
     try {
       // Crea un formulario FormData con los datos de usuario y contraseña
@@ -102,6 +106,7 @@ export default function Sesion({ navigation }) {
             contra={true}
           />
           <Buttons textoBoton="Iniciar Sesión" accionBoton={handlerLogin} />
+          <Buttons textoBoton="Iniciar Sesión" accionBoton={navigateRegister} />
         </View>
       </>
     </View>

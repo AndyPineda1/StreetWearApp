@@ -10,7 +10,7 @@ import {
   RefreshControl,
   Alert
 } from "react-native";
-import fetchData from "../utils/fetchdata";
+import fetchData from "../utils/conexion";
 import BgButton from "../components/Buttons/BgButton";
 
 export default function Sesion({ navigation }) {
@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
   },
   largeText: {
     fontSize: 25,
-    fontFamily: "FuturaMedium",
     marginTop: 30,
     marginBottom: 30,
   },

@@ -1,9 +1,27 @@
 import React from 'react';
-import { View, Text, StyleSheet, Linking, TouchableOpacity } from 'react-native';
+import Buttons from "../components/Buttons/Button";
+import fetchData from "../utils/conexion";
+import { View, Text, StyleSheet, Linking, TouchableOpacity, Alert } from 'react-native';
 
-const AboutUsScreen = () => {
+export default function AboutUsScreen({navigation}){
   const handlePress = (url) => {
     Linking.openURL(url);
+  };
+
+  const handleLogout = async () => {
+    try {
+      const DATA = await fetchData("cliente", "logOut");
+      if (DATA.status) {
+        navigation.navigate('sesion');
+        Alert.alert('Info', 'Se ha cerrado la sesión');
+      } else {
+        Alert.alert('Error', DATA.error);
+      }
+    } catch (error) {
+      Alert.alert('Error', 'Ocurrió un error al cerrar la sesión');
+    }
+
+    
   };
 
   return (
@@ -32,14 +50,17 @@ const AboutUsScreen = () => {
         </TouchableOpacity>
       </View>
       <Text style={styles.footer}>© 2024 StreetWearDrop</Text>
+      <Buttons textoBoton='Cerrar Sesión' accionBoton={handleLogout} />
     </View>
+
+    
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3c4240',
+    backgroundColor: '#fff',
     padding: 16,
     alignItems: 'center',
   },
@@ -49,6 +70,7 @@ const styles = StyleSheet.create({
     marginBottom: 24,
     textAlign: 'center',
     color: '#000',
+    marginTop: 40,
   },
   description: {
     fontSize: 16,
@@ -80,5 +102,3 @@ const styles = StyleSheet.create({
     marginTop: 24,
   },
 });
-
-export default AboutUsScreen;

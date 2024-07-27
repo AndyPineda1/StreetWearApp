@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import sesion from './src/screens/sesion';
 import navigator from './src/navigation/navigator';
 import registro from './src/screens/registro';
+import productoinfo from './src/screens/ProductoInfo';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -17,6 +18,7 @@ export default function App() {
         <Stack.Screen name="sesion" component={sesion} />
         <Stack.Screen name="navigator" component={navigator} />
         <Stack.Screen name="registro" component={registro} />
+        <Stack.Screen name="productoinfo" component={productoinfo} />
       </Stack.Navigator>
     </NavigationContainer>
   );

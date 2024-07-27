@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, Alert, FlatList } from "react-native";
 import ProductoCard from '../components/cards/producto';
 import * as constantes from '../utils/constantes';
-import fetchData from "../utils/fetchdata";
+import fetchData from "../utils/conexion";
 import { useNavigation } from "@react-navigation/native";
 
 // Definimos el componente funcional CategoriaScreen que recibe los parámetros de ruta.
@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
   },
   MainText: {
     fontSize: 30,
-    fontFamily: 'FuturaMedium',
     marginTop: 5,
     marginBottom: 40
   },

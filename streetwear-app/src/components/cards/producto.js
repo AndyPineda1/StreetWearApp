@@ -13,11 +13,11 @@ export default function producto({
   navigation
 }) {
   return (
-    <TouchableOpacity style={[styles.card, styles.horizontalCard]} onPress={() => navigation.navigate('Info', { idProducto })}>
+    <TouchableOpacity style={[styles.card, styles.horizontalCard]} onPress={() => navigation.navigate('productoinfo', { idProducto })}>
       <View style={styles.imageContainer}>
         <Image
           source={{
-            uri: `${ip}/luxurycat/luxurycat-web/API/images/productos/${imagenProducto}`,
+            uri: `${ip}//API/images/productos/${imagenProducto}`,
           }}
           style={styles.image}
           resizeMode="contain"
@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     color: "#333",
-    fontFamily: "FuturaMedium",
   },
   textTitle: {
     fontSize: 18,
