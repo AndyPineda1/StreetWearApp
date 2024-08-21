@@ -12,6 +12,7 @@ Bienvenido al repositorio oficial de la aplicación móvil de StreetWear, desarr
 - npm install @react-navigation/native-stack
 - npm install @react-navigation/native
 - npm install @react-navigation/bottom-tabs
+- npm install react-native-masked-text
 
 #### Tecnologías Utilizadas
 - React Native
