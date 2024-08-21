@@ -98,6 +98,11 @@ INSERT INTO Categorias (idCategoria, nombreCategoria) VALUES
 (3, 'Gorras'),
 (4, 'Accesorios' );
 
+
+
+
+
+
 CREATE TABLE Secciones (
 idSeccion INT PRIMARY KEY AUTO_INCREMENT,
 nombreSeccion VARCHAR(30),
