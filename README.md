@@ -1,4 +1,4 @@
-### LuxuryCat Mobile App
+### StreetWearDrop Mobile App
 
 Bienvenido al repositorio oficial de la aplicación móvil de StreetWear, desarrollada con React Native y Expo. Esta aplicación está diseñada para nuestros clientes, facilitando la compra de ropa exclusiva desde la comodidad de su dispositivo móvil.
 
@@ -40,4 +40,4 @@ Este proyecto está bajo la licencia [Creative Commons Attribution 4.0 Internati
 - Compartir: copiar y redistribuir el material en cualquier medio o formato.
 - Adaptar: remezclar, transformar y construir sobre el material para cualquier propósito, incluso comercialmente.
 
-¡Gracias por tu interés en nuestra aplicación móvil LuxuryCat! ¡Esperamos que disfrutes de la experiencia de compra para tu gato como nunca antes!
+¡Gracias por tu interés en nuestra aplicación móvil StreetWearDrop! ¡Esperamos que disfrutes de la experiencia de compra para tu gato como nunca antes!
