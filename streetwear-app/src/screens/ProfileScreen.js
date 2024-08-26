@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
 const getClientData = () => {
+  // Igual acá esta malo  
   return {
     id_Cliente: 1,
     nombre_Cliente: 'wilfredo',

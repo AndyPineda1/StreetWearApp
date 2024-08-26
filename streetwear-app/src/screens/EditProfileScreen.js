@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Button, ScrollView, Image } from 'react-native';
 
+// Esto manda a lmar datos específicos de la base, cambiar a modo que se auto rellene 
 const getClientData = () => {
   return {
     id_Cliente: 1,
