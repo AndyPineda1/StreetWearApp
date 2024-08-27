@@ -6,15 +6,17 @@ import sesion from './src/screens/sesion';
 import navigator from './src/navigation/navigator';
 import registro from './src/screens/registro';
 import productoinfo from './src/screens/ProductoInfo';
+import Onboarding from './src/screens/Onboarding';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName='sesion'
+        initialRouteName='Onboarding'
         screenOptions={{ headerShown: false }}>
-
+        
+        <Stack.Screen name="Onboarding" component={Onboarding} />
         <Stack.Screen name="sesion" component={sesion} />
         <Stack.Screen name="navigator" component={navigator} />
         <Stack.Screen name="registro" component={registro} />
