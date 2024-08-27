@@ -23,5 +23,22 @@ const fetchData = async (filename, action, form = null) => {
     }
 };
 
+const getClientDataFromAPI = async (clientId) => {
+    try {
+      const response = await fetch(`${CLIENTE_API}?id=${clientId}`);
+      const data = await response.json();
+  
+      if (data.status) {
+        return data.dataset;
+      } else {
+        console.error("Error al obtener datos del cliente:", data.error);
+        return null;
+      }
+    } catch (error) {
+      console.error("Error en la solicitud a la API:", error);
+      return null;
+    }
+  };
+
 
 export default fetchData;

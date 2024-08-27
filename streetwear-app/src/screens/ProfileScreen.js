@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
+import { getClientDataFromAPI } from '../utils/conexion'; // Supongamos que la función está en este archivo
 
-const getClientData = () => {
+function getClientData() {
   // Igual acá esta malo  
   return {
     id_Cliente: 1,
