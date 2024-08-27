@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Alert, FlatList, TouchableOpacity, ActivityIndicator, TextInput } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import fetchData from '../utils/fetchdata';
+import fetchData from '../utils/conexion';
 import Buttons from '../components/Buttons/Button';
 
 // Definimos el componente funcional Carrito que recibe la navegación como prop.

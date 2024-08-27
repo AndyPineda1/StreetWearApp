@@ -12,8 +12,8 @@ import {
   FlatList,
   RefreshControl,
 } from "react-native";
-import fetchData from "../utils/fetchdata";
-import BgButton from "../components/Buttons/BgButton";
+import fetchData from "../utils/conexion";
+import BgButton from "../components/Buttons/Button";
 
 // Definimos el componente funcional Sesion que recibe la navegación como prop.
 export default function Sesion({ navigation }) {
@@ -59,16 +59,6 @@ export default function Sesion({ navigation }) {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#000000" />
-      <ImageBackground
-        source={require("../../src/img/wallpaper1.png")}
-        style={styles.decorator}
-      >
-        <Image
-          source={require("../../assets/logo.png")}
-          style={styles.image}
-          resizeMode="contain"
-        />
-      </ImageBackground>
 
       <View style={styles.mainContainer}>
         <Text style={styles.LargeText}>Nuestras Categorías</Text>
